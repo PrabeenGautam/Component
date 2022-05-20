@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Component</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="card" id="card-1">
+        <div class="section">
+          <div class="section__left">
+            <div class="section__number">01</div>
+            <div class="section__title">Where are these chairs assemebled?</div>
+          </div>
+          <div class="section__right">
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="section__content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+            aspernatur tenetur aliquid quaerat quae, incidunt corporis
+            repudiandae. Tempora unde fugit autem sequi repellendus at eum iusto
+            perspiciatis corrupti, laudantium cum!
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <div class="section__left">
+            <div class="section__number">02</div>
+            <div class="section__title">
+              How long do i have to return my chair?
+            </div>
+          </div>
+          <div class="section__right">
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="section__content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+            aspernatur tenetur aliquid quaerat quae, incidunt corporis
+            repudiandae. Tempora unde fugit autem sequi repellendus at eum iusto
+            perspiciatis corrupti, laudantium cum!
+          </p>
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Blanditiis necessitatibus eius, fugiat unde totam non</li>
+            <li>
+              quis provident corporis sapiente laborum quaerat perferendis
+            </li>
+            <li>
+              inventore aliquam animi eaque! Dicta voluptate voluptatum culpa?
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <div class="section__left">
+            <div class="section__number">03</div>
+            <div class="section__title">
+              Do you ship to countries outside the EU?
+            </div>
+          </div>
+          <div class="section__right">
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="section__content">
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Blanditiis necessitatibus eius, fugiat unde totam non</li>
+            <li>
+              quis provident corporis sapiente laborum quaerat perferendis
+            </li>
+            <li>
+              inventore aliquam animi eaque! Dicta voluptate voluptatum culpa?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let card = document.querySelectorAll(".card");
+    for (let i = 0; i < card.length; i++) {
+      card[i].addEventListener("click", () => {
+        card[i].classList.toggle("active");
+        card[i].querySelector(".fa-solid").classList.toggle("fa-angle-down");
+        card[i].querySelector(".fa-solid").classList.toggle("fa-angle-up");
+      });
+    }
+  </script>
+</html>
