@@ -4,49 +4,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Component Examples</title>
+    <title>Hero Section</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap");
       * {
-        margin: 0;
         padding: 0;
+        margin: 0;
         box-sizing: border-box;
       }
 
       body {
-        font: 18px normal sans-serif;
-        line-height: 1.6;
+        font-family: "Rubik", sans-serif;
+        color: #444;
       }
 
-      .logo {
-        font-size: 20px;
-        margin-left: 20px;
+      .container {
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      .header-container {
+        width: 1200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .header-container .content {
+        width: 50%;
+      }
+
+      header {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(../images/hero.jpg);
+        height: 100vh;
+        color: white;
+        background-size: cover;
       }
 
       nav {
-        margin-left: 80px;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        align-items: center;
+        padding-top: 32px;
       }
 
-      nav ul a {
+      h1 {
+        font-size: 52px;
+        margin-bottom: 32px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+      }
+
+      .btn:link,
+      .btn:visited {
+        padding: 16px 32px;
+        display: inline-block;
+        background-color: #e67e22;
+        color: white;
+        border-radius: 8px;
         text-decoration: none;
+        font-weight: 500;
+      }
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+      }
+
+      section {
+        padding: 96px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      a:link,
+      a:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #e67e22;
+      }
+
+      @media screen and (max-width: 1250px) {
+        .header-container,
+        .container {
+          width: 800px;
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <div class="logo">Component</div>
-      <nav>
-        <ul>
-          <a href="./Accordion/index.html">
-            <li>Accordion</li>
-          </a>
-          <a href="./Carousel/index.html">
-            <li>Carousel</li>
-          </a>
-          <a href="./Pagination/index.html">
-            <li>Pagination</li>
-          </a>
-        </ul>
+      <nav class="container">
+        <div class="logo">PRABIN GAUTAM</div>
+        <div class="navigation">
+          <ul>
+            <li><a href="./Accordion/index.html">Accordion</a></li>
+            <li><a href="./Carousel/index.html">Carousel</a></li>
+            <li><a href="./Layout/index.html">Layout</a></li>
+            <li><a href="./Pagination/index.html">Pagination</a></li>
+          </ul>
+        </div>
       </nav>
+
+      <div class="header-container">
+        <div class="content">
+          <h1>A healthy meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food subscription that will make you eat
+            healthy again. Tailoured to your personal tastes and nutritional
+            needs.
+          </p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn"
+            >Start Eating Well</a
+          >
+        </div>
+      </div>
     </header>
+
+    <section>
+      <div class="container">
+        <h2>Some random headings</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+          asperiores id laboriosam facere similique eveniet maiores unde
+          sapiente laudantium cumque iste, quos accusamus totam sit doloribus
+          iusto quae itaque deserunt! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptas ipsum repellat, magnam nostrum ad ratione
+          velit? Alias nemo, iusto iure amet necessitatibus perferendis mollitia
+          officiis, ab illo neque, repellat culpa.
+        </p>
+      </div>
+    </section>
   </body>
 </html>
