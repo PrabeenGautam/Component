@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 8px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+        transform: scale(1.5);
+      }
+
+      .hero {
+        width: 200px;
+        object-fit: cover;
+      }
+
+      .cards {
+        background-color: #087f5b;
+        border-radius: 8px;
+        width: 800px;
+        margin: 100px auto;
+        padding: 32px 48px 32px 86px;
+        display: flex;
+        align-items: center;
+        gap: 68px;
+        position: relative;
+      }
+
+      .text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        color: #ebfcf5;
+      }
+      .author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #c3faeb;
+      }
+      .author__job {
+        font-size: 12px;
+        color: #c3faeb;
+      }
+
+      .btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .btn-icon {
+        stroke: #087f5b;
+        width: 24px;
+        height: 24px;
+      }
+
+      .btn-left {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn-right {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: -32px;
+        transform: translateX(-50%);
+      }
+
+      .dot {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 2px solid #087f5b;
+        background-color: #fff;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
+      .active {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img src="../images//maria.jpg" alt="maria" />
+      <blockquote>
+        <p class="text">
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          sint possimus magnam expedita ea suscipit rerum ab corrupti."
+        </p>
+        <p class="author">Maria de Almeida</p>
+        <p class="author__job">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot active">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+
+    <div class="cards">
+      <img src="../images/hero.jpg" alt="maria" class="hero" />
+      <blockquote>
+        <p class="text">
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+          iusto velit non maiores consequuntur iure provident! Ut suscipit odio
+          velit quos earum fuga, saepe vitae eveniet ducimus nemo esse?
+          Corporis!"
+        </p>
+        <p class="author">Hero no 1</p>
+        <p class="author__job">Senior Product Manager at Hero.com</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot active">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>
